@@ -15,7 +15,6 @@
 		D73CB2AE25D3A4EF00C40E42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D73CB2AC25D3A4EF00C40E42 /* LaunchScreen.storyboard */; };
 		D73CB2B725D3A50300C40E42 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73CB2B625D3A50300C40E42 /* Food.swift */; };
 		D73CB2BA25D3A54500C40E42 /* NutritionTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73CB2B925D3A54500C40E42 /* NutritionTracker.swift */; };
-		D73CB2BE25D3A5BF00C40E42 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73CB2BD25D3A5BF00C40E42 /* FoodList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		D73CB2AF25D3A4EF00C40E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D73CB2B625D3A50300C40E42 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		D73CB2B925D3A54500C40E42 /* NutritionTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTracker.swift; sourceTree = "<group>"; };
-		D73CB2BD25D3A5BF00C40E42 /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +62,9 @@
 			children = (
 				D73CB2A125D3A4ED00C40E42 /* AppDelegate.swift */,
 				D73CB2A325D3A4ED00C40E42 /* SceneDelegate.swift */,
-				D73CB2B625D3A50300C40E42 /* Food.swift */,
-				D73CB2BD25D3A5BF00C40E42 /* FoodList.swift */,
-				D73CB2B925D3A54500C40E42 /* NutritionTracker.swift */,
 				D73CB2A525D3A4ED00C40E42 /* ContentView.swift */,
+				D73CB2B625D3A50300C40E42 /* Food.swift */,
+				D73CB2B925D3A54500C40E42 /* NutritionTracker.swift */,
 				D73CB2A725D3A4EF00C40E42 /* Assets.xcassets */,
 				D73CB2AC25D3A4EF00C40E42 /* LaunchScreen.storyboard */,
 				D73CB2AF25D3A4EF00C40E42 /* Info.plist */,
@@ -157,7 +154,6 @@
 				D73CB2B725D3A50300C40E42 /* Food.swift in Sources */,
 				D73CB2BA25D3A54500C40E42 /* NutritionTracker.swift in Sources */,
 				D73CB2A225D3A4ED00C40E42 /* AppDelegate.swift in Sources */,
-				D73CB2BE25D3A5BF00C40E42 /* FoodList.swift in Sources */,
 				D73CB2A425D3A4ED00C40E42 /* SceneDelegate.swift in Sources */,
 				D73CB2A625D3A4ED00C40E42 /* ContentView.swift in Sources */,
 			);

@@ -9,7 +9,9 @@ import Foundation
 
 class Food {
 	
-	var foodName: String = ""
+	var foodName = ""
+	
+	static var foodList = ""
 	
 	var calories = 0.0
 	var protein = 0.0
@@ -23,6 +25,7 @@ class Food {
 	
 	init(foodName: String, calories: Double, protein: Double, sugar: Double, fats: Double) {
 		self.foodName = foodName
+		Food.foodList += Food.foodList == "" ? foodName : ", \(foodName)"
 		self.calories = calories
 		self.protein = protein
 		self.sugar = sugar
@@ -34,13 +37,17 @@ class Food {
 	
 }
 
-func combineFoods(_ ingredients: [Food]) -> Food {
+func combineFoods(_ ingredients: [Food], _ foodName: String) -> Food {
 	let newFood = Food()
+	
 	for i in 0 ..< ingredients.count {
 		newFood.calories += ingredients[i].calories
 		newFood.protein += ingredients[i].protein
 		newFood.sugar += ingredients[i].sugar
 		newFood.fats += ingredients[i].fats
 	}
+	
+	Food.foodList += Food.foodList == "" ? foodName : ", \(foodName)"
+
 	return newFood
 }
