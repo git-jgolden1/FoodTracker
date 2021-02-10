@@ -1,0 +1,4 @@
+*.swp
+*.xcodeproj
+.DS_Store
+project.pbxproj
