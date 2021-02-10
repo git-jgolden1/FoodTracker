@@ -2,27 +2,32 @@
 //  ContentView.swift
 //  FoodTracker
 //
-//  Created by Jonathan Gurr on 2/9/21.
+//  Created by Jonathan Gurr on 2/10/21.
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+	
+	init(appState a: AppState) {
+		self.a = a
+	}
+	
+	@Environment(\.managedObjectContext) private var viewContext
+	
 	@State var userFood = ""
+	var a: AppState
 	
-	let orange = Food(foodName: "orange", calories: 60, protein: 1, sugar: 12, fats: 0)
-	let flourTortilla = Food(foodName: "tortilla", calories: 138, protein: 4, sugar: 1.5, fats: 4)
-	lazy var burrito = combineFoods([orange, flourTortilla], "burrito")
-	
-    var body: some View {
-			
-			TextField("enter a food here...", text: $userFood)
-				.multilineTextAlignment(.center)
-			Button("Add Food") {
-				addFood(userFood.lowercased())
-			}
-//			Text("")
-    }
+	var body: some View {
+		
+		TextField("enter a food here...", text: $userFood)
+			.multilineTextAlignment(.center)
+		Button("Add Food") {
+			addFood(userFood.lowercased())
+		}
+		//			Text("")
+	}
 	
 	func addFood(_ food: String) {
 		if Food.foodList.contains(food) {
@@ -34,8 +39,15 @@ struct ContentView: View {
 	
 }
 
+private let itemFormatter: DateFormatter = {
+	let formatter = DateFormatter()
+	formatter.dateStyle = .short
+	formatter.timeStyle = .medium
+	return formatter
+}()
+
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView(appState: AppState()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+	}
 }
